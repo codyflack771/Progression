@@ -1,0 +1,31 @@
+#navigationContainer {
+	background-color: rgba(0, 0, 0, 0.85);
+	.navigation {
+		width: $containerSize;
+		height: 75px;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		a {
+			display: inline-block;
+			width: 20%;
+			color: #fff;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 23px;
+			text-align: center;
+			transform: skew(-20deg);
+			background-size: 100% 200%;
+			background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 187, 13, 1) 50%);
+			transition: background-position 0.5s;
+			font-family: $fontStack;
+			li {
+				margin: 26px 0 26px 0;
+				transform: skew(20deg);
+			}
+		}
+		a:hover {
+			background-position: 0 -100%;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+header {
+	height: 100px;
+	#logo {
+		margin: 10px 0 0 0;
+		float: left;
+		height: 80px;
+		svg {
+			display: block;
+			float: left;
+			width: 300px;
+			height: 80px;
+		}
+	}
+	#login {
+		float: right;
+		margin: 37.5px 0 0 0;
+		img {
+			width: 25px;
+			height: 25px;
+			float: left;
+			margin: 0 10px 0 0;
+		}
+		span {
+			font-size: 25px;
+			text-transform: uppercase;
+			float: left;
+			color: $primaryColor;
+			font-family: $fontStack;
+			#signup {
+				cursor: hand;
+				cursor: pointer;
+			}
+			#signin {
+				cursor: hand;
+				cursor: pointer;
+			}
+		}
+	}
+}
