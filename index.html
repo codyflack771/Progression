@@ -36,7 +36,29 @@
 					</a>
 				</div>
 				<div id="login">
-					<span><a id="signup">Sign Up</a> / <a id="signin">Login</a></span>
+					<span id="signinContainer"><a id="signin">Sign Up / Login</a></span>
+					<div class="signinPop">
+						<div class="popHeader">
+							<div class="psuedoArrow"></div>
+							<span class="loginHeader active"><a>Login</a></span>
+							<span class="signupHeader"><a>Signup</a></span>
+						</div>
+						<form class="loginForm" action="#">
+							<input type="text" id="username" placeholder="Username" name="username">
+							<input type="password" id="password" placeholder="Password" name="password">
+							<button type="submit">Login</button>
+							<button class="closePop">Go Back</button>
+						</form>
+
+						<form class="signinForm" action="#">
+							<input type="text" id="email" placeholder="Email" name="email">
+							<input type="text" id="username" placeholder="Username" name="username">
+							<input type="password" id="password" placeholder="Password" name="password">
+							<input type="password" id="verify" placeholder="Verify Password" name="verify">
+							<button type="submit">Sign Up</button>
+							<button class="closePop">Go Back</button>
+						</form>
+					</div>
 				</div>
 			</header>
 		</div>
@@ -88,7 +110,7 @@
 						Dota2 is a registered trademark of valve corporation
 					</span>
 					<span class="icon8">
-						<a href="https://icons8.com/">Twitter and Discord icon credits</a>
+						<a href="https://icons8.com/">Icon credits</a>
 					</span>
 				</span>
 				<ul class="footerNav">
@@ -132,5 +154,6 @@
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
+		<script src="javascript/login.js"></script>
 	</body>
 </html>

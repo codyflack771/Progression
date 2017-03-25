@@ -74,21 +74,16 @@ header {
   header #login {
     float: right;
     margin: 37.5px 0 0 0; }
-    header #login img {
-      width: 25px;
-      height: 25px;
-      float: left;
-      margin: 0 10px 0 0; }
-    header #login span {
+    header #login #signinContainer {
       font-size: 25px;
       text-transform: uppercase;
       float: left;
       color: #FFBB0D;
       font-family: "Roboto", sans-serif; }
-      header #login span #signup {
+      header #login #signinContainer #signup {
         cursor: hand;
         cursor: pointer; }
-      header #login span #signin {
+      header #login #signinContainer #signin {
         cursor: hand;
         cursor: pointer; }
 
@@ -255,5 +250,97 @@ footer {
       fill: #fff;
       width: 30px;
       height: 30px; }
+
+.signinPop {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 7%;
+  top: 90px;
+  width: 340px;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: 0 0 0 0;
+  padding: 0;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  color: #FFBB0D; }
+  .signinPop .popHeader {
+    height: 40px;
+    width: 100%; }
+    .signinPop .popHeader .loginHeader {
+      display: block;
+      float: left;
+      font-size: 25px;
+      width: 50%;
+      height: 40px;
+      text-align: center;
+      border-bottom: 2px solid #FFBB0D;
+      color: #fff; }
+    .signinPop .popHeader .signupHeader {
+      display: block;
+      width: 50%;
+      height: 40px;
+      font-size: 25px;
+      float: left;
+      text-align: center;
+      border-bottom: 2px solid #FFBB0D; }
+    .signinPop .popHeader a {
+      display: block;
+      margin-top: 5px;
+      cursor: hand;
+      cursor: pointer;
+      transition: color 0.25s; }
+    .signinPop .popHeader a:hover {
+      color: #fff; }
+  .signinPop .signinForm {
+    display: none; }
+  .signinPop .loginForm,
+  .signinPop .signinForm {
+    clear: both; }
+    .signinPop .loginForm input,
+    .signinPop .signinForm input {
+      width: 200px;
+      border-radius: 20px;
+      border: 1px solid #FFBB0D;
+      padding: 10px;
+      margin: 10px auto;
+      background-color: #000;
+      color: #fff; }
+    .signinPop .loginForm input:focus,
+    .signinPop .signinForm input:focus {
+      outline: 0;
+      box-shadow: 0 0 0pt 0pt #FFBB0D; }
+    .signinPop .loginForm button,
+    .signinPop .signinForm button {
+      display: block;
+      width: 170px;
+      border-radius: 20px;
+      border: 1px solid #FFBB0D;
+      padding: 10px;
+      margin: 10px auto;
+      color: #fff;
+      background-color: #000;
+      transition: background-color 0.25s;
+      cursor: hand;
+      cursor: pointer; }
+    .signinPop .loginForm button:hover,
+    .signinPop .signinForm button:hover {
+      background-color: #FFBB0D; }
+    .signinPop .loginForm button:focus,
+    .signinPop .signinForm button:focus {
+      outline: 0; }
+  .signinPop input {
+    display: block; }
+
+.psuedoArrow {
+  position: absolute;
+  top: -20px;
+  left: 230px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+  height: 0px;
+  width: 0px; }
 
 /*# sourceMappingURL=main.css.map */
