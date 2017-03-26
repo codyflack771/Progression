@@ -1,3 +1,4 @@
+/*Main / Dashboard*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -114,6 +115,9 @@ header {
     #navigationContainer .navigation a:hover {
       background-position: 0 -100%; }
 
+.navActive {
+  background-position: 0 -100%; }
+
 #streams {
   width: 25%;
   float: left; }
@@ -128,11 +132,6 @@ header {
       color: #fff;
       text-transform: uppercase;
       font-family: "Roboto", sans-serif; }
-    #streams #streamHeader img {
-      float: right;
-      width: 20px;
-      height: 20px;
-      margin: 10px 15px 10px 0; }
   #streams #live {
     height: 600px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -190,7 +189,8 @@ header {
       margin: 7.5px 0 7.5px; }
   #news #content {
     background-color: rgba(0, 0, 0, 0.6);
-    min-height: 600px;
+    height: 600px;
+    overflow: auto;
     margin: 0 0 75px 0; }
 
 footer {
@@ -342,5 +342,51 @@ footer {
   border-width: 0 20px 20px 20px;
   height: 0px;
   width: 0px; }
+
+/*Leaderboard*/
+.leaderboardContainer {
+  display: flex;
+  justify-content: space-around; }
+
+.leaderboard {
+  width: 31%;
+  float: left; }
+  .leaderboard .leaderboardHeader {
+    height: 40px;
+    margin: 25px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.85); }
+    .leaderboard .leaderboardHeader h2 {
+      font-size: 25px;
+      margin: 7.5px 0 7.5px 15px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      display: inline-block;
+      width: 100%; }
+  .leaderboard .leaders {
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    margin-bottom: 75px;
+    list-style-type: decimal;
+    list-style-position: inside; }
+    .leaderboard .leaders li {
+      color: #FFBB0D;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-family: "Roboto", sans-serif;
+      padding: 15px 0 15px 15px; }
+  .leaderboard .leaders::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent; }
+  .leaderboard .leaders::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent; }
+  .leaderboard .leaders::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #FFBB0D; }
 
 /*# sourceMappingURL=main.css.map */

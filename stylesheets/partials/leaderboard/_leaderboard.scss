@@ -1,23 +1,33 @@
-#streams {
-	width: 25%;
+.leaderboardContainer {
+	display: flex;
+	justify-content: space-around;
+}
+
+.leaderboard {
+	width: 31%;
 	float: left;
-	#streamHeader {
+	.leaderboardHeader {
 		height: 40px;
 		margin: 25px 0 0 0;
 		background-color: rgba(0, 0, 0, 0.85);
 		h2 {
 			font-size: 25px;
-			float: left;
 			margin: 7.5px 0 7.5px 15px;
 			color: #fff;
 			text-transform: uppercase;
 			font-family: $fontStack;
+			text-align: center;
+			display: inline-block;
+			width: 100%;
 		}
 	}
-	#live {
+	.leaders {
 		height: 600px;
 		background-color: rgba(0, 0, 0, 0.6);
 		overflow: auto;
+		margin-bottom: 75px;
+		list-style-type: decimal;
+		list-style-position: inside;
 		li {
 			color: $primaryColor;
 			text-transform: uppercase;
@@ -26,16 +36,16 @@
 			padding: 15px 0 15px 15px;
 		}
 	}
-	#live::-webkit-scrollbar-track {
+	.leaders::-webkit-scrollbar-track {
 		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 		border-radius: 10px;
 		background-color: transparent;
 	}
-	#live::-webkit-scrollbar {
+	.leaders::-webkit-scrollbar {
 		width: 6px;
 		background-color: transparent;
 	}
-	#live::-webkit-scrollbar-thumb {
+	.leaders::-webkit-scrollbar-thumb {
 		border-radius: 10px;
 		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 		background-color: $primaryColor;
