@@ -14,3 +14,18 @@ body {
 	background-size: cover;
 	min-height: 100vh;
 }
+
+	body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        background-color: transparent;
+    }
+    body::-webkit-scrollbar {
+        width: 6px;
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+    body::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+        background-color: $primaryColor;
+    }
