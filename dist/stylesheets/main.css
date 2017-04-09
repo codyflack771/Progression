@@ -1,0 +1,423 @@
+/*Main / Dashboard*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff;
+  background-image: url("../images/backdrop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh; }
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  background-color: transparent; }
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(0, 0, 0, 0.65); }
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+  background-color: #FFBB0D; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+
+header {
+  height: 100px; }
+  header #logo {
+    margin: 10px 0 0 0;
+    float: left;
+    height: 80px; }
+    header #logo svg {
+      display: block;
+      float: left;
+      width: 300px;
+      height: 80px; }
+  header #login {
+    float: right;
+    margin: 37.5px 0 0 0; }
+    header #login #signinContainer {
+      font-size: 25px;
+      text-transform: uppercase;
+      float: left;
+      color: #FFBB0D;
+      font-family: "Roboto", sans-serif; }
+      header #login #signinContainer #signup {
+        cursor: hand;
+        cursor: pointer; }
+      header #login #signinContainer #signin {
+        cursor: hand;
+        cursor: pointer; }
+
+#navigationContainer {
+  background-color: rgba(0, 0, 0, 0.85); }
+  #navigationContainer .navigation {
+    width: 80%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around; }
+    #navigationContainer .navigation a {
+      display: inline-block;
+      width: 20%;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 23px;
+      text-align: center;
+      transform: skew(-20deg);
+      background-size: 100% 200%;
+      background-image: linear-gradient(to bottom, transparent 50%, #ffbb0d 50%);
+      transition: background-position 0.5s;
+      font-family: "Roboto", sans-serif; }
+      #navigationContainer .navigation a li {
+        margin: 26px 0 26px 0;
+        transform: skew(20deg); }
+    #navigationContainer .navigation a:hover {
+      background-position: 0 -100%; }
+
+.navActive {
+  background-position: 0 -100%; }
+
+#streams {
+  width: 25%;
+  float: left; }
+  #streams #streamHeader {
+    height: 40px;
+    margin: 25px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.85); }
+    #streams #streamHeader h2 {
+      font-size: 25px;
+      float: left;
+      margin: 7.5px 0 7.5px 15px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif; }
+  #streams #live {
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto; }
+    #streams #live li {
+      color: #FFBB0D;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-family: "Roboto", sans-serif;
+      padding: 15px 0 15px 15px; }
+  #streams #live::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent; }
+  #streams #live::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.65); }
+  #streams #live::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #FFBB0D; }
+
+#news {
+  width: 65%;
+  margin: 25px 5% 0 5%;
+  float: left; }
+  #news #newsHeader {
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.85); }
+    #news #newsHeader li {
+      display: inline-block; }
+      #news #newsHeader li a {
+        display: inline-block;
+        text-decoration: none;
+        margin: 7.5px 10px 7.5px 0;
+        padding-right: 10px;
+        transform: skew(-20deg);
+        border-right: 2px solid #fff; }
+        #news #newsHeader li a span {
+          display: inline-block;
+          font-size: 25px;
+          font-family: "Roboto", sans-serif;
+          color: #fff;
+          transform: skew(20deg);
+          text-transform: uppercase; }
+    #news #newsHeader li:nth-child(1) a {
+      margin-left: 15px; }
+    #news #newsHeader li:nth-child(3) a {
+      border-right: none; }
+    #news #newsHeader img {
+      display: inline-block;
+      float: right;
+      width: 25px;
+      height: 25px;
+      margin: 7.5px 0 7.5px; }
+  #news #content {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 600px;
+    overflow: auto;
+    margin: 0 0 75px 0; }
+
+footer {
+  clear: both;
+  height: 300px;
+  background-color: #000;
+  border-top: 7px solid #FFBB0D; }
+  footer span {
+    float: left; }
+  footer .copyright {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin: 20px 0 0 20px;
+    float: left; }
+  footer .dota {
+    float: left;
+    clear: both;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    margin: 20px 0 0 20px;
+    text-decoration: none; }
+  footer .icon8 {
+    float: left;
+    clear: both;
+    margin: 20px 0 0 20px; }
+    footer .icon8 a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-family: "Roboto", sans-serif;
+      text-decoration: none; }
+  footer .footerNav {
+    float: right;
+    margin: 20px 20px 0 0; }
+    footer .footerNav li {
+      display: inline-block; }
+      footer .footerNav li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        margin: 20px 0 0 20px;
+        text-decoration: none; }
+  footer .socialMedia {
+    float: right;
+    clear: right;
+    margin: 20px 20px 0 0; }
+    footer .socialMedia li {
+      display: inline-block;
+      margin: 0 5px; }
+    footer .socialMedia #twitterSVG,
+    footer .socialMedia #discordSVG {
+      fill: #fff;
+      width: 30px;
+      height: 30px; }
+
+.signinPop {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 7%;
+  top: 90px;
+  width: 340px;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0, 0.85);
+  margin: 0 0 0 0;
+  padding: 0;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  color: #FFBB0D; }
+  .signinPop .popHeader {
+    height: 40px;
+    width: 100%; }
+    .signinPop .popHeader .loginHeader {
+      display: block;
+      float: left;
+      font-size: 25px;
+      width: 50%;
+      height: 40px;
+      text-align: center;
+      border-bottom: 2px solid #FFBB0D;
+      color: #fff; }
+    .signinPop .popHeader .signupHeader {
+      display: block;
+      width: 50%;
+      height: 40px;
+      font-size: 25px;
+      float: left;
+      text-align: center;
+      border-bottom: 2px solid #FFBB0D; }
+    .signinPop .popHeader a {
+      display: block;
+      margin-top: 5px;
+      cursor: hand;
+      cursor: pointer;
+      transition: color 0.25s; }
+    .signinPop .popHeader a:hover {
+      color: #fff; }
+  .signinPop .signinForm {
+    display: none; }
+  .signinPop .loginForm,
+  .signinPop .signinForm {
+    clear: both; }
+    .signinPop .loginForm input,
+    .signinPop .signinForm input {
+      width: 200px;
+      border-radius: 20px;
+      border: 1px solid #FFBB0D;
+      padding: 10px;
+      margin: 10px auto;
+      background-color: #000;
+      color: #fff; }
+    .signinPop .loginForm input:focus,
+    .signinPop .signinForm input:focus {
+      outline: 0;
+      box-shadow: 0 0 0pt 0pt #FFBB0D; }
+    .signinPop .loginForm button,
+    .signinPop .signinForm button {
+      display: block;
+      width: 170px;
+      border-radius: 20px;
+      border: 1px solid #FFBB0D;
+      padding: 10px;
+      margin: 10px auto;
+      color: #fff;
+      background-color: #000;
+      transition: background-color 0.25s;
+      cursor: hand;
+      cursor: pointer; }
+    .signinPop .loginForm button:hover,
+    .signinPop .signinForm button:hover {
+      background-color: #FFBB0D; }
+    .signinPop .loginForm button:focus,
+    .signinPop .signinForm button:focus {
+      outline: 0; }
+  .signinPop input {
+    display: block; }
+
+.psuedoArrow {
+  position: absolute;
+  top: -20px;
+  left: 230px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.85) transparent;
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+  height: 0px;
+  width: 0px; }
+
+/*Leaderboard*/
+.leaderContainer {
+  display: flex;
+  justify-content: space-around; }
+
+.leaderboards {
+  width: 31%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  margin: 25px 0 75px 0; }
+  .leaderboards thead {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #FFBB0D; }
+    .leaderboards thead tr {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 12.5px 0;
+      height: 50px; }
+      .leaderboards thead tr th {
+        width: 33%;
+        font-size: 25px;
+        text-align: center; }
+    .leaderboards thead .tableHeader {
+      display: block;
+      width: 100%; }
+      .leaderboards thead .tableHeader th {
+        display: block;
+        width: 100%;
+        text-align: center; }
+  .leaderboards tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 550px; }
+    .leaderboards tbody tr {
+      display: block;
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.65);
+      color: #FFBB0D;
+      font-size: 25px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around; }
+      .leaderboards tbody tr td {
+        width: 33%;
+        padding: 15px 0;
+        text-align: center; }
+    .leaderboards tbody .yourTeam {
+      background-color: rgba(0, 0, 0, 0.85); }
+  .leaderboards tbody::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    background-color: transparent; }
+  .leaderboards tbody::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.65); }
+  .leaderboards tbody::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+    background-color: #FFBB0D; }
+
+/*# sourceMappingURL=main.css.map */
